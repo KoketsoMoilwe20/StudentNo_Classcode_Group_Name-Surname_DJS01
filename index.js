@@ -19,7 +19,7 @@ const rf = fbr*time //calculates remaining fuel
 
 
 // Pick up an error with how the function below is called and make it robust to such errors
-calcNewVel = (vel, acc, time) => { 
+ const calcNewVel = (vel, acc, time) => { 
   return vel + (acc*time)
 }
 
