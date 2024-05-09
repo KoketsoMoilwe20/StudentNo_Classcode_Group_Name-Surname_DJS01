@@ -14,16 +14,22 @@ const fuel = 5000; // remaining fuel (kg)
 const fbr = 0.5; // fuel burn rate (kg/s)
 
 
-const d2 = d + (vel*time) //calcultes new distance
-const rf = fbr*time //calculates remaining fuel
+
 
 
 // Pick up an error with how the function below is called and make it robust to such errors
  const calcNewVel = (vel, acc, time) => { 
-  return vel + (acc*time)
+  //insertion of valid input parameters
+  if (typeOf acc !== 'number' || typeOf vel !== 'number' || typeOf time !== 'number') {
+    throw new Error('Invalid input');
+  }
+  //return vel + (acc*time)
 }
 
 const vel2 = calcNewVel(vel, acc, time) //calculates new velocity based on acceleration
+
+const d2 = d + (vel*time) //calcultes new distance
+const rf = fbr*time //calculates remaining fuel
 
 console.log(`Corrected New Velocity: ${vel2} km/h`);
 console.log(`Corrected New Distance: ${d2} km`);
