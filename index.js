@@ -23,7 +23,11 @@ const fbr = 0.5; // fuel burn rate (kg/s)
   if (typeOf acc !== 'number' || typeOf vel !== 'number' || typeOf time !== 'number') {
     throw new Error('Invalid input');
   }
-  //return vel + (acc*time)
+
+  // Calculate new velocity based on acceleration
+  const newVelocity = velocity + (acceleration * duration);
+
+  return newVelocity;
 }
 
 const vel2 = calcNewVel(vel, acc, time) //calculates new velocity based on acceleration
