@@ -30,6 +30,10 @@ const fbr = 0.5; // fuel burn rate (kg/s)
   return newVelocity;
 }
 
+if (velocity.unit !== 'km/h' || acceleration.unit !== 'm/s^2' || duration.unit !== 's' || initialDistance.unit !== 'km' || fuelAmount.unit !== 'kg' || fuelBurnRate.unit !== 'kg/s') {
+  throw new Error('Invalid unit of measurement for one or more input parameters');
+}
+
 const vel2 = calcNewVel(vel, acc, time) //calculates new velocity based on acceleration
 
 const d2 = d + (vel*time) //calcultes new distance
