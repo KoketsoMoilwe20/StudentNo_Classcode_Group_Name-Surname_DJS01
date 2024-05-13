@@ -13,7 +13,8 @@ const d = 0; // distance (km)
 const fuel = 5000; // remaining fuel (kg)
 const fbr = 0.5; // fuel burn rate (kg/s)
 
-
+const initialVelocity = 1000 / 3.6; //converting to m/s
+const initialDistance = d * 1000; //convert to meters
 
 
 
